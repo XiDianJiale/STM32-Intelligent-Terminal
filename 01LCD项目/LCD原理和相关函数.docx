@@ -1,0 +1,34 @@
+1.  显示屏显示原理：
+LDC即液晶显示器，是一种利用液晶材料的物理特性来控制光线通过能力的显示技术。LCD的工作原理涉及电场对液晶分子排列的影响，从而控制像素点的明暗状态，显示不同颜色和灰度的图像。
+
+2.  显示字符/图片相关的函数：
+1)LCD初始化
+void lcd_init(void)
+2) LCD清屏
+void lcd_clear(uint16_t color)
+3)指定区域填充单个颜色
+void lcd_fill(uint16_t sx, uint16_t sy, uint16_t ex, uint16_t ey, uint32_t color)
+4)指定区域填充颜色块
+void lcd_color_fill(uint16_t sx, uint16_t sy, uint16_t ex, uint16_t ey, uint16_t*color)
+5)画线
+void lcd_draw_line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2,uint16_t color)
+6)显示字符串
+void lcd_show_string(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint8_t size, char *p, uint16_t color)
+7)绘制圆形
+void LCD_DrawRect(u8 Xpos, u16 Ypos, u8 Height, u16 Width);
+8)绘制矩形
+void LCD_DrawRect(u8 Xpos, u16 Ypos, u8 Height, u16 Width)
+9)绘制实心圆
+void LCD_FillCircle(uint16_t Xpos, uint16_t Ypos, uint16_t Radius)
+10)显示数字（整数）
+void LCD_DisplayNum(uint16_t Line, uint16_t Column, int Number)
+（通常，显示数字可以通过 LCD_DisplayString 将数字转成字符串后显示，或自定义 LCD_DisplayNum 实现直接显示）
+【参考资料：蓝桥杯STM32自学记录_LCD显示屏_lcd调试函数-CSDN博客】 
+
+3.  STM32本地图片格式：
+在STM32中，本地图片通常要求使用 RGB565格式（16位色）。同时，图片数据需以二进制数组形式存储在Flash中，便于直接读取显示。
+
+
+4.  如何绘制图形：
+   1)简单图形的绘制：调用(2)中所提及的函数，进行绘制。
+   2)复杂图形的绘制：对于比较复杂的显示对象(汉字、图片等)，绘制起来比较繁琐，可以利用工具将文字或图片转换C语言数组，然后进行显示。常见的工具有PCtoLCD、Image2Lcd和TakeMold等。
