@@ -52,4 +52,20 @@ Markdown 文件:
 .xlsx - Excel 表格
 .pptx - PowerPoint 演示文稿
 </details>
+接线图：
+![23fef515fe82536b7b488e969f5058d](https://github.com/user-attachments/assets/fadadd13-110f-42ff-a7f6-91e42cefddd4)
 
+基础界面：
+![8f6032246e72dae3fab6dfbfbf26229](https://github.com/user-attachments/assets/f09fd85c-31f9-461d-afa1-34542083f5c3)
+
+按键KEY1进入TCP透传模式：
+![229f5bdff348fee81ad67a0138634e9](https://github.com/user-attachments/assets/0dfb5ddf-b7b0-458d-90f9-0c6c14f91860)
+
+wifi连接初始化：（注意我这里网络调试助手【左】和串口【右】截图在了一起，实际上时候分来来写现象）
+![image](https://github.com/user-attachments/assets/59836efc-670a-4281-b015-c1c8db063630)
+
+![229f5bdff348fee81ad67a0138634e9](https://github.com/user-attachments/assets/e6c95ae9-39a7-40b0-88bb-76b6c28f5130)
+
+分别发送temp , humi , mpu 进入三种模式：
+![image](https://github.com/user-attachments/assets/81d6a6f2-f7b5-4555-99d9-a770018cbbe9)
+![f9abb24853f51f428ba375d678f0033](https://github.com/user-attachments/assets/b4a7ed53-6782-4306-ada0-30f8646851ee)
